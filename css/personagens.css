@@ -1,0 +1,299 @@
+body {
+    margin: 20px;
+    padding: 20px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('/img/blue_bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.page-title {
+    font-family: 'MinhaFonte', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.subtitle {
+    font-family: 'MinhaFonte', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1500px;
+    margin: 200px auto;
+    margin-left: 5px;
+}
+
+.personagem-info {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #ffffff;
+    width: 70%;
+    margin-right: 50px;
+}
+
+.personagem-image {
+    max-width: 100px;
+    margin-right: 150px;
+}
+
+.text {
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('/font/Jujutsu\ Kaisen.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.minhafonte {
+    font-family: 'MinhaFonte', sans-serif;
+    font-size: 30px;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+#logo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#logo {
+    max-width: 250px;
+    margin-left: 50px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #ffe600;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+ul li a:hover {
+    color: #ffe600;
+}
+
+ul li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+#menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    border-radius: 3px;
+}
+
+#menu-bar {
+    background: #333333;
+    padding: 3px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+#logo-container {
+    text-align: center;
+}
+
+#menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu {
+    font-family: 'MinhaFonte', sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+#menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    transition: color 0.3s;
+}
+
+#menu li a:hover {
+    color: #ffe600;
+}
+
+#menu.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #08007e;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #ffe600;
+    border-radius: 5px;
+  }
+
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: #ffe600 #ff7300;
+  }
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 3px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0
+}
+
+footer p {
+    font-family: 'MinhaFonte', sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #333;
+        z-index: 1;
+    }
+    
+    #menu.active {
+        display: flex;
+    }
+
+    #menu li {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    #menu-toggle {
+        display: flex;
+    }
+
+    #logo {
+        max-width: 150px;
+        margin-left: 20px;
+    }
+
+    #menu:not(.active) {
+        display: none;
+    }
+}
