@@ -18,7 +18,7 @@ body::before {
 }
 
 p {
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1.5;
     margin: 5px 0;
     color: #ffffff;
@@ -27,6 +27,7 @@ p {
 
 h1 {
     font-family: 'MinhaFonte';
+    margin-top: 100px;
     font-size: 50px;
     text-align: center;
     color: #fff;
