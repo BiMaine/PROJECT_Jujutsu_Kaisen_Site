@@ -1,6 +1,6 @@
 @import url('shared.css');
 
-.container {
+.container-personagem {
     display: flex;
     align-items: center;
     justify-content: center;
