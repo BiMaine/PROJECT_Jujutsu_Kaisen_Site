@@ -1,5 +1,9 @@
 @import url('shared.css');
 
+h2 {
+    text-align: center;
+}
+
 .container-personagem {
     display: flex;
     align-items: center;
@@ -12,11 +16,12 @@
     color: #ffffff;
     width: 70%;
     margin-right: 50px;
+    margin-left: 150px;
 }
 
-.personagem-image {
-    max-width: 100px;
-    margin-right: 450px;
+.personagem-img {
+    max-width: 500px;
+    margin-right: 150px;
 }
 
 .text {

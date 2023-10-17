@@ -5,9 +5,10 @@
     }
 
     h1 {
-        font-size: 20px;
+        font-size: 45px;
         text-align: center;
         margin: 15px 0;
+        margin-top: 70px;
     }
 
     .chibi-image {
@@ -96,15 +97,22 @@
         align-items: center;
     }
 
-    .personagem-info {
-        width: 100%;
-        margin-right: 0;
+    .minhafonte {
+        order: 1;
     }
 
-    .personagem-image {
-        max-width: 150px;
-        margin: 0 auto 20px;
+    .personagem-img {
+        max-width: 300px;
+        margin: 0;
+        order: 2;
     }
+
+    .personagem-info {
+        width: 100%;
+        order: 3;
+        margin: 0;
+    }
+
 
     table {
         font-size: 14px;
